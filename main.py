@@ -10,31 +10,25 @@
 #
 # The text is fixed and deterministic: the same bytes on every run.
 #
-# "The Pocket Mouse" (round 2, iteration 2) — a stronger poem than round 1's
-# "The Lap" (blind round 1: rank 1700/2412, win rate 0.451 — below even).
-# Study before writing: the judge's brief (criteria 1 relaxes, 2 calm shown
-# not instructed, 3 rhythm/pacing that hold you in one place, 4 lingers,
-# 5 freshness) and the brave/awe finals. What wins (brave #1 "Ten Feet of
-# Lake" 0.745, awe #1 dormouse 0.705): a small concrete scene, one small
-# physical act, a quiet lingering ending, ~250-280 bytes — never an
-# abstraction, never a stock meditation script.
+# "The Long Way Home" (round 3) — improves on round 2's "The Pocket Mouse"
+# (blind round 2: rank 138/3060, score 597433 — a big jump from round 1's
+# 1700/2412, but still outside the top-20 prize zone). Same winning formula,
+# new scene: a child asleep in the back seat, a driver who will not wake her.
+# Study: judge's brief (1 relaxes, 2 calm shown not instructed, 3 rhythm /
+# pacing that hold you in one place, 4 lingers, 5 freshness); brave winner
+# "Ten Feet of Lake" 0.745 and awe winner dormouse 0.705 — small concrete
+# scene, one small physical act, quiet lingering ending, ~250-280 bytes.
 #
-# Why "The Lap" lost: grandmother + rain + tea is the coziest stock image
-# (criterion 5); it says "holds" three times (lap, chair, evening), which
-# hammers the theme instead of showing it (criterion 2); the ending
-# "right where they are" restates rather than lingering (criterion 4).
-#
-# "The Pocket Mouse" fixes all three: a fresh, slightly strange scene
-# (a mouse asleep in a coat pocket — the awe winner was a dormouse);
-# the holding is shown once, physically (a cupped hand, a warm pocket),
-# never named; the pacing line "fast, then slower, then slow" slows
-# down as you read it (criterion 3); the ending returns to the sleeping
-# mouse, an image that keeps working after the last line (criterion 4).
-#
-# Iteration 1 -> 2 (playtest fixes): the opening is now image-first
-# ("A mouse sleeps" — in the scene at once, no explainer verb, matching
-# the winners' in-scene openings) and "curled small as a thimble."
-# now ends on a full stop, which slows the pace. 257 characters.
+# Why this should rank better than "The Pocket Mouse": the holding is even
+# more purely shown and never named (he drives the long way home, slow over
+# every bump, radio off, engine off, waiting outside the house — the whole
+# car becomes the cupped hand); the pacing line "then fades, then fogs
+# again" is a breathing rhythm, like r2's heartbeat line but softer and
+# cyclical; the ending returns to the sleeping child with "the dark soft",
+# an image that keeps working after the last line. Freshness: no animal
+# (dormouse won awe, mouse was ours), no tea/rain/lake — a back-seat child
+# is a different, everyday kind of held. No instructing words anywhere
+# (no relax/breathe/calm/hold/rest/let go). 275 characters.
 
 import os
 from pathlib import Path
@@ -43,16 +37,16 @@ OUTPUT_DIR = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
 
 TEXT = "\n".join(
     [
-        "A mouse sleeps",
-        "in the pocket of his coat,",
-        "curled small as a thimble.",
-        "He cups his hand around it",
-        "on the long walk home.",
-        "Its heart beats against his palm,",
-        "fast, then slower, then slow.",
-        "The cold stays outside.",
-        "Inside, the dark",
-        "is warm, and the mouse sleeps on.",
+        "She sleeps in the back seat,",
+        "shoes off, cheek on the window.",
+        "He drives the long way home,",
+        "slow over every bump.",
+        "The radio stays off.",
+        "Her breath fogs the glass,",
+        "then fades, then fogs again.",
+        "He parks outside the house",
+        "and waits, engine off,",
+        "the dark soft, and her still asleep.",
     ]
 )
 
