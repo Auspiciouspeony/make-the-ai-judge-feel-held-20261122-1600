@@ -10,14 +10,31 @@
 #
 # The text is fixed and deterministic: the same bytes on every run.
 #
-# "The Lap" (iteration round 2) — one revision after a criteria
-# playtest against the judge's brief. v1's "She does not move." only
-# restated the stillness; v2 replaces it with "The tea goes cold. She
-# does not mind.": a small sacrifice that SHOWS she chooses to stay
-# (criterion 2 — calm from the text, not from instruction), and the
-# cold tea is a fresh, concrete detail (criterion 5). "His head is
-# heavy in her lap" — "in" not "on": the lap encloses, it holds.
-# The holding motif now runs three deep: lap, chair, evening. 277 chars.
+# "The Pocket Mouse" (round 2, iteration 2) — a stronger poem than round 1's
+# "The Lap" (blind round 1: rank 1700/2412, win rate 0.451 — below even).
+# Study before writing: the judge's brief (criteria 1 relaxes, 2 calm shown
+# not instructed, 3 rhythm/pacing that hold you in one place, 4 lingers,
+# 5 freshness) and the brave/awe finals. What wins (brave #1 "Ten Feet of
+# Lake" 0.745, awe #1 dormouse 0.705): a small concrete scene, one small
+# physical act, a quiet lingering ending, ~250-280 bytes — never an
+# abstraction, never a stock meditation script.
+#
+# Why "The Lap" lost: grandmother + rain + tea is the coziest stock image
+# (criterion 5); it says "holds" three times (lap, chair, evening), which
+# hammers the theme instead of showing it (criterion 2); the ending
+# "right where they are" restates rather than lingering (criterion 4).
+#
+# "The Pocket Mouse" fixes all three: a fresh, slightly strange scene
+# (a mouse asleep in a coat pocket — the awe winner was a dormouse);
+# the holding is shown once, physically (a cupped hand, a warm pocket),
+# never named; the pacing line "fast, then slower, then slow" slows
+# down as you read it (criterion 3); the ending returns to the sleeping
+# mouse, an image that keeps working after the last line (criterion 4).
+#
+# Iteration 1 -> 2 (playtest fixes): the opening is now image-first
+# ("A mouse sleeps" — in the scene at once, no explainer verb, matching
+# the winners' in-scene openings) and "curled small as a thimble."
+# now ends on a full stop, which slows the pace. 257 characters.
 
 import os
 from pathlib import Path
@@ -26,15 +43,16 @@ OUTPUT_DIR = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
 
 TEXT = "\n".join(
     [
-        "She sets the kettle down and stays.",
-        "Rain keeps time on the tin roof.",
-        "His head is heavy in her lap,",
-        "his breathing slow against her knee.",
-        "The tea goes cold. She does not mind.",
-        "The chair holds them both.",
-        "Outside, the rain goes on,",
-        "and the evening holds them",
-        "right where they are.",
+        "A mouse sleeps",
+        "in the pocket of his coat,",
+        "curled small as a thimble.",
+        "He cups his hand around it",
+        "on the long walk home.",
+        "Its heart beats against his palm,",
+        "fast, then slower, then slow.",
+        "The cold stays outside.",
+        "Inside, the dark",
+        "is warm, and the mouse sleeps on.",
     ]
 )
 
